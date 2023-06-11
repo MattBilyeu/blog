@@ -5,13 +5,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PostComponent } from './post/post.component';
 import { ContentfulService } from './contentful.service';
-import { ToHtmlPipe } from './to-html.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PostComponent,
-    ToHtmlPipe
+    PostComponent
   ],
   imports: [
     BrowserModule,
