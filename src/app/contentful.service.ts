@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { from } from 'rxjs';
 
 import { createClient, Entry } from 'contentful';
 
@@ -18,15 +19,18 @@ const CONFIG = {
 export class ContentfulService {
   private client = createClient({
     space: CONFIG.space,
-    accessToken:
-      CONFIG.accessToken
+    accessToken: CONFIG.accessToken
   });
 
   constructor() { }
 
-  getEntries(query?: object): Promise<Entry<any>[]> {
+  getBlogPosts(query?: object): Promise<Entry<any>[]> {
     return this.client.getEntries(Object.assign({
       content_type: CONFIG.contentTypeIds.blogPost
-    }, query)).then(res => res.items);
+    }, query)).then(res => res.items)
+
+    // return this.client.getEntries(Object.assign({
+    //   content_type: CONFIG.contentTypeIds.blogPost
+    // }, query)).then(res => res.items);
   }
 }

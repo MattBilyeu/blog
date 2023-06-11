@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ContentfulService } from './contentful.service';
+import { Observable, from } from 'rxjs';
 
 import { Entry } from 'contentful';
 
@@ -10,16 +11,20 @@ import { Entry } from 'contentful';
 })
 export class AppComponent implements OnInit {
   title = 'blog';
-  entries: any[] = [];
+  entries: Entry<any>[] = [];
+  blogPosts: Observable<any> | undefined;
 
   constructor(private contentfulService: ContentfulService) {}
 
   ngOnInit() {
-    this.contentfulService.getEntries()
-      .then(entries => this.entries = entries)
-  }
+    const promise = this.contentfulService.getBlogPosts();
+    this.blogPosts = from(promise)
+    // const promise = this.contentfulService.getBlogPosts()
+    //   .then(entries => this.entries = entries)
+      }
+  
 
-  onLog(index: number) {
-    console.log(this.entries[index].fields.content)
+  onLog() {
+    console.log(this.entries[0])
   }
 }

@@ -1,7 +1,11 @@
-<div *ngFor="let entry of entries; let i = index">
-    <button (click)="onLog(i)">Log Entry {{ i }}</button>
-</div>
-<div *ngFor="let entry of entries">
-    <h3>{{ entry.fields.title }}</h3>
-    <div>{{ entry.fields.content }}</div>
-</div>
+<main *ngIf="blogPosts | async as blogPosts">
+    <!-- <pre>
+        {{ blogPosts | json }}
+    </pre> -->
+
+    <div class="blog-posts-container" *ngFor="let blogPost of blogPosts">
+        <img [src]="blogPost.fields.featuredImage.fields.file.url" alt="">
+        <h2>{{ blogPost.fields.title }}</h2>
+        <div [innerHtml]="blogPost.fields.body | toHtml"></div>
+    </div>
+</main>
