@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ContentfulService } from './contentful.service';
 
-import { Entry } from 'contentful';
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -11,6 +9,7 @@ import { Entry } from 'contentful';
 export class AppComponent implements OnInit {
   title = 'blog';
   entries: any[] = [];
+  mobileNavHidden: boolean = true;
 
   constructor(private contentfulService: ContentfulService) {}
 
@@ -19,7 +18,8 @@ export class AppComponent implements OnInit {
       .then(entries => this.entries = entries)
   }
 
-  onLog(index: number) {
-    console.log(this.entries[index].fields.content)
+  toggleMobileNav() {
+    this.mobileNavHidden = !this.mobileNavHidden;
+    console.log('Hide Nav? ', this.mobileNavHidden);
   }
 }

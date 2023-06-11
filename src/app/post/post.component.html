@@ -1,1 +1,12 @@
-<p>post works!</p>
+<main>
+    <h1>SOUND FAITH NEWS</h1>
+    <p>The finger on the pulse of Christian philosophy, theology, and apologetics.</p>
+    <br>
+    <button id="returnButton" (click)="onReturn()">Return</button>
+    <div *ngIf="entry !== undefined">
+        <h1>{{ entry.fields['title'] }}</h1>
+        <h3>{{ publishedDate }}</h3>
+        <div [innerHTML]="entry.fields.body | toHtml">
+        </div>
+    </div>
+</main>

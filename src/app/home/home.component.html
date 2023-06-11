@@ -1,0 +1,13 @@
+<main>
+    <div class="blogContainer">
+        <div *ngFor="let entry of entries">
+            <div class="blogTile" (click)="onNavigate(entry.sys.id)">
+                <img class="blogFeaturedImage" [src]="entry.fields.featuredImage.fields.file.url" alt="">
+                <div class="blogText">
+                    <h3>{{ entry.fields.title }}</h3>
+                    <p>{{ entry.fields.slug }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

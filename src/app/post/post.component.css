@@ -1,0 +1,27 @@
+#returnButton {
+    padding: 0.2rem;
+    background-color: white;
+    color: var(--primary-color);
+    box-shadow: 4px 4px 0 darkgrey;
+    border: none;
+    width: 5rem;
+    font-size: 1rem;
+    cursor: pointer
+}
+
+#returnButton:hover {
+    animation: hoverAnimation 0.5s ease-in-out forwards;
+}
+
+@keyframes hoverAnimation {
+    0% {
+        box-shadow: 4px 4px 0 darkgrey;
+        background-color: white;
+        color: var(--primary-color);
+    }
+    100% {
+        box-shadow: none;
+        background-color: darkgrey;
+        color: white;
+    }
+}
