@@ -1,3 +1,53 @@
 body {
     padding: 1rem 0;
 }
+
+.mailChimp {
+    color: var(--primary-color);
+    justify-content: center;
+    margin: 0 auto 1rem auto;
+    background-color: white;
+    text-align: center;
+}
+
+.mailChimp form {
+    width: 343px;
+    padding: 1rem;
+}
+
+.mailChimp #title {
+    margin: 0;
+}
+
+.asterisk {
+    padding: 0.15rem;
+}
+
+#mc-embedded-subscribe {
+    margin: 0.5rem auto 0 auto;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    box-shadow: 4px 4px 0 darkgrey;
+    padding: 0.25rem;
+    cursor: pointer;
+}
+
+#mc-embedded-subscribe:hover {
+    animation: subscribe 0.5s ease-in-out forwards;
+}
+
+@keyframes subscribe {
+    0% {
+        box-shadow: 4px 4px 0 darkgrey;
+        background-color: var(--primary-color);
+        color: white;
+        font-weight: normal;
+    }
+    100% {
+        box-shadow: none;
+        background-color: darkgrey;
+        color: black;
+        font-weight: bold
+    }
+}
