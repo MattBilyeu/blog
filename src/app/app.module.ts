@@ -7,13 +7,15 @@ import { PostComponent } from './post/post.component';
 import { ContentfulService } from './contentful.service';
 import { HomeComponent } from './home/home.component';
 import { ToHtmlPipe } from './to-html.pipe';
+import { FeedComponent } from './feed/feed.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PostComponent,
     HomeComponent,
-    ToHtmlPipe
+    ToHtmlPipe,
+    FeedComponent
   ],
   imports: [
     BrowserModule,
