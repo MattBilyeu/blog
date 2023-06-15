@@ -8,6 +8,7 @@ import { ContentfulService } from './contentful.service';
 import { HomeComponent } from './home/home.component';
 import { ToHtmlPipe } from './to-html.pipe';
 import { FeedComponent } from './feed/feed.component';
+import { BlogredirectComponent } from './blogredirect/blogredirect.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { FeedComponent } from './feed/feed.component';
     PostComponent,
     HomeComponent,
     ToHtmlPipe,
-    FeedComponent
+    FeedComponent,
+    BlogredirectComponent
   ],
   imports: [
     BrowserModule,
