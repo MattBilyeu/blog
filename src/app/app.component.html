@@ -23,33 +23,38 @@
         <header>
             <nav>
                 <div id="mobileNavigation">
-                    <div id="hamburger" (click)="toggleMobileNav()">
+                    <div id="hamburger">
                         <div></div>
                         <div></div>
                         <div></div>
                     </div>
-                    <div class="mobileBackdrop" *ngIf="!mobileNavHidden"></div>
-                    <div class="mobileNav" *ngIf="!mobileNavHidden">
-                        <a href="https://soundfaithconsulting-development.netlify.app">Home</a>
-                        <a href="https://soundfaithconsulting-development.netlify.app/services/services.html">Services</a>
-                        <a href="https://soundfaithconsulting-development.netlify.app/speaker-team/speakers.html">Speaker Team</a>
-                        <a href="https://soundfaithconsulting-development.netlify.app/contact-us/contact-us.html">Contact Us</a>
-                        <a href="https://soundfaithconsulting-development.netlify.app/about/about.html">About</a>
-                        <a href="https://soundfaithconsulting-development.netlify.app/causes/causes.html">Causes</a>
+                    <div class="mobileBackdrop"></div>
+                    <div class="mobileNav">
+                        <a href="../index.html">Home</a>
+                        <a href="../services/services.html">Services</a>
+                        <a href="../speaker-team/speakers.html">Speaker Team</a>
+                        <a href="../contact-us/contact-us.html">Contact Us</a>
+                        <a href="../about/about.html">About</a>
+                        <a href="../causes/causes.html">Causes</a>
+                        <a href="/">Blog</a>
+                        <a href="../store/store.html">Store</a>
+                        <a href="../booking/booking.html">Booking</a>
                     </div>
-                    <div class="buyChristianMinistryBooks">
-                        <img src="assets/images/icons/buyMinistryBooks.png" alt="Buy ministry Books" class="ministryBookStoreIcon">
+                    <div class="bookingButton">
+                        <a href="../booking/booking.html">Booking</a>
                     </div>
                 </div>
                 <div id="desktopNavigation">
-                    <a href="https://soundfaithconsulting-development.netlify.app/">Home</a>
-                    <a href="https://soundfaithconsulting-development.netlify.app/services/services.html">Services</a>
-                    <a href="https://soundfaithconsulting-development.netlify.app/speaker-team/speakers.html">Speaker Team</a>
-                    <a href="https://soundfaithconsulting-development.netlify.app/contact-us/contact-us.html">Contact Us</a>
-                    <a href="https://soundfaithconsulting-development.netlify.app/about/about.html">About</a>
-                    <a href="https://soundfaithconsulting-development.netlify.app/causes/causes.html">Causes</a>
-                    <div class="buyChristianMinistryBooks">
-                        <img src="assets/images/icons/buyMinistryBooks.png" alt="Buy ministry Books" class="ministryBookStoreIcon">
+                    <a href="../index.html">Home</a>
+                    <a href="../services/services.html">Services</a>
+                    <a href="../speaker-team/speakers.html">Speaker Team</a>
+                    <a href="../contact-us/contact-us.html">Contact Us</a>
+                    <a href="../about/about.html">About</a>
+                    <a href="../causes/causes.html">Causes</a>
+                    <a href="/">Blog</a>
+                    <a href="../store/store.html">Store</a>
+                    <div class="bookingButton">
+                        <a href="../booking/booking.html">Booking</a>
                     </div>
                 </div>
             </nav>
