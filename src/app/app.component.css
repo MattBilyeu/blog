@@ -37,6 +37,16 @@ body {
     animation: subscribe 0.5s ease-in-out forwards;
 }
 
+.bookingButton {
+    padding: 1rem;
+    background-color: white;
+}
+
+.bookingButton a {
+    color: var(--primary-color);
+    font-weight: bold
+}
+
 @keyframes subscribe {
     0% {
         box-shadow: 4px 4px 0 darkgrey;
